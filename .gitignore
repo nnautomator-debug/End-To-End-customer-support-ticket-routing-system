@@ -1,0 +1,90 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Model and database artifacts
+*.pkl
+*.joblib
+*.db
+*.duckdb
+*.sqlite
+*.sqlite3
+
+# Generated experiment, vector, and ML artifacts
+mlruns/
+mlartifacts/
+**/mlruns/
+**/mlartifacts/
+**/faiss_index/
+*.faiss
+*.index
+
+# Logs, reports, and generated media
+*.log
+*.png
+*.jpg
+*.jpeg
+*.parquet
+
+# Local datasets
+Data/*.csv
+
+# Notebook checkpoints and OS files
+.ipynb_checkpoints/
+.DS_Store# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Model and database artifacts
+*.pkl
+*.joblib
+*.db
+*.duckdb
+*.sqlite
+*.sqlite3
+
+# Generated experiment, vector, and ML artifacts
+mlruns/
+mlartifacts/
+**/mlruns/
+**/mlartifacts/
+**/faiss_index/
+*.faiss
+*.index
+
+# Logs, reports, and generated media
+*.log
+*.png
+*.jpg
+*.jpeg
+*.parquet
+
+# Local datasets (restore separately for training/evaluation)
+Data/*.csv
+
+# Notebook checkpoints and OS files
+.ipynb_checkpoints/
+.DS_Store
