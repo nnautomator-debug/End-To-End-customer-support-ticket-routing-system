@@ -1,0 +1,36 @@
+eval_dataset = {
+    "samples": [
+        {
+            "question": "I am urgently reporting a series of severe outages impacting several key devices critical to our operations, including network switches and corporate laptops.",
+            "expected_answer": "Thank you for alerting us. We recognize the critical impact of outages across your network switches and laptops. Your ticket has been escalated to our senior technical team for immediate investigation. To expedite a resolution, please reply with affected serial numbers and any recent system error logs. We are here to help.",
+        },
+        {
+            "question": "We are looking to process a return for item #89423 and require exchange instructions as soon as possible.",
+            "expected_answer": "Thank you for reaching out to customer support. We would be happy to assist with exchanging item #89423. Please verify your original order number and confirm if the package is unopened. Once verified, we will email you a prepaid shipping label and step-by-step instructions. We appreciate your patience.",
+        },
+        {
+            "question": "I am writing with an inquiry regarding our latest invoice details and unexpected billing charges.",
+            "expected_answer": "Thank you for contacting billing support. We apologize for any confusion regarding your recent invoice charges. Our finance team is reviewing your account breakdown to clarify all line items. Please provide your invoice number so we can investigate immediately and ensure your statement is accurate. We appreciate your business.",
+        },
+        {
+            "question": "Sehr geehrtes Support-Team, ich möchte einen kritischen Sicherheitsvorfall im System melden.",
+            "expected_answer": "Vielen Dank für Ihre Meldung. Wir nehmen Sicherheitsvorfälle sehr ernst. Ihr Anliegen wurde umgehend an unser Security-Team eskaliert, das die Untersuchung aufgenommen hat. Bitte teilen Sie uns mit, welche Systeme betroffen sind und ob Daten beeinträchtigt wurden. Wir halten Sie über jeden Schritt auf dem Laufenden. Vielen Dank für Ihre Unterstützung.",
+        },
+        {
+            "question": "Could you please send over the latest user documentation for our marketing software platform?",
+            "expected_answer": "Thank you for reaching out to us. You can access and download our comprehensive, up-to-date user documentation directly from our knowledge base portal. I have also attached the latest PDF user guide to this response for your convenience. Please let us know if you need any further guidance.",
+        },
+        {
+            "question": "We are experiencing an issue where users cannot log in due to an account authentication disruption.",
+            "expected_answer": "Thank you for bringing this to our attention. We understand how crucial account login access is for your team. Our identity engineering team is actively investigating this authentication disruption. Please confirm if users see a specific error code. We will provide an update within thirty minutes.",
+        },
+        {
+            "question": "We would like to leave general feedback regarding the latest UI updates on your web application.",
+            "expected_answer": "Thank you for taking the time to share your feedback with us. We truly value your input on our latest web application UI updates. I have forwarded your observations directly to our product design team for review as we continuously improve user experience. Please feel free to reach out anytime.",
+        },
+        {
+            "question": "I have a query regarding how to set up the smart home integration feature with our account.",
+            "expected_answer": "Thank you for contacting customer support. Setting up your smart home integration is simple. Please navigate to Settings in your dashboard, select Integrations, and follow the on-screen pairing prompt. If you encounter any issues during setup, reply with your device model and we will guide you right through.",
+        },
+    ]
+}

@@ -1,0 +1,3 @@
+{
+  "DecisionTreeClassifier_score_unknown_dataset-2": "DecisionTreeClassifier.score(X=<ndarray>, y=y_train_le)"
+}

@@ -1,0 +1,34 @@
+artifact_path: /Users/ashriths/Library/Mobile Documents/com~apple~CloudDocs/Repositries/End
+  To End NLP Project/Pre Processing + Model Eval/mlruns/1/models/m-d1edabbcd13047f7af9f4d1af1b77981/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.14
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.16.0
+model_id: m-d1edabbcd13047f7af9f4d1af1b77981
+model_size_bytes: 233628
+model_uuid: m-d1edabbcd13047f7af9f4d1af1b77981
+prompts: null
+run_id: 816bf2d3d8744af28a647c2bcbf343ad
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: ndarray
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 1612]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "object", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-09-17 09:27:07.150088'

@@ -1,0 +1,4 @@
+{
+  "VotingClassifier_score-2_unknown_dataset-2": "VotingClassifier.score(X=<ndarray>, y=y_train_le)",
+  "VotingClassifier_score_unknown_dataset-2": "VotingClassifier.score(X=<ndarray>, y=y_train_le)"
+}

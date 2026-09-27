@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>End-to-End NLP Ticket Intelligence Architecture</title>
+  <style>
+    :root{--ink:#14202b;--muted:#627180;--line:#9aa8b3;--ml:#d94d4d;--ml-soft:#fff0f0;--ai:#3d9b58;--ai-soft:#effaf0;--sw:#1e2933;--sw-soft:#fff;--blue:#4e8fd0;--blue-soft:#edf5ff;--group:#159b98;--bg:#f9fbfc}
+    *{box-sizing:border-box} html,body{margin:0;min-width:1180px;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif} body{padding:24px}
+    .page{width:1400px;margin:0 auto;background:white;border:1px solid #d9e1e6;box-shadow:0 16px 40px #20304012;overflow:hidden}.top{display:flex;justify-content:space-between;align-items:flex-start;padding:23px 30px 17px;border-bottom:1px solid #e5ebee}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#177f7c;margin-bottom:8px}.title{font-size:25px;font-weight:700;letter-spacing:-.025em}.subtitle{margin-top:5px;color:var(--muted);font-size:12px}.legend{display:flex;gap:16px;align-items:center;font-size:11px;color:var(--muted);padding-top:8px}.legend-item{display:flex;align-items:center;gap:6px}.legend-box{width:16px;height:11px;border:2px solid;border-radius:2px;background:#fff}.legend-box.ml{border-color:var(--ml);background:var(--ml-soft)}.legend-box.ai{border-color:var(--ai);background:var(--ai-soft)}.legend-box.sw{border-color:var(--sw);background:#fff}
+    .canvas{position:relative;height:1010px;background-color:#fff;background-image:linear-gradient(#edf2f5 1px,transparent 1px),linear-gradient(90deg,#edf2f5 1px,transparent 1px);background-size:28px 28px}.canvas:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#fff8 0%,transparent 18%,transparent 82%,#fff8 100%);pointer-events:none}
+    .group{position:absolute;border:2px dashed #64c8c4;border-radius:14px;background:#ecfffd38;z-index:1}.group-label{position:absolute;top:-13px;left:18px;padding:3px 10px;background:#eafffc;border:1px solid #8ad7d4;border-radius:4px;color:#147c78;font-size:11px;font-weight:700;letter-spacing:.04em}.node{position:absolute;z-index:3;min-width:148px;min-height:62px;padding:11px 12px;border:2px solid;border-radius:6px;background:#fff;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.18;font-size:13px;font-weight:700;box-shadow:0 3px 7px #1b2a3510}.node small{display:block;margin-top:5px;font-size:10px;font-weight:400;color:var(--muted);line-height:1.25}.node.ml{border-color:var(--ml);background:var(--ml-soft)}.node.ai{border-color:var(--ai);background:var(--ai-soft)}.node.sw{border-color:var(--sw);background:#fff}.node.blue{border-color:var(--blue);background:var(--blue-soft)}.node.tall{min-height:76px}.store{border-radius:50%;min-width:148px;height:67px}.store:after{content:'';position:absolute;left:7px;right:7px;bottom:-8px;height:14px;border:2px solid var(--sw);border-top:0;border-radius:0 0 50% 50%;background:white;z-index:-1}
+    .label{position:absolute;z-index:4;font-size:10px;color:#71808d;background:#fff;padding:2px 5px;border-radius:3px}.section-label{position:absolute;z-index:2;font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:#77909b}
+    svg{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}.flow{fill:none;stroke:#82a0b0;stroke-width:1.6}.flow.ai-flow{stroke:#5cae76}.flow.ml-flow{stroke:#d87878}.flow.dashed{stroke-dasharray:6 5}.arrow{fill:#82a0b0}.arrow.ai-arrow{fill:#5cae76}.arrow.ml-arrow{fill:#d87878}
+    .footer{display:flex;justify-content:space-between;padding:14px 30px;border-top:1px solid #e5ebee;color:var(--muted);font-size:10px}.footer strong{color:var(--ink)}
+    @media(max-width:1450px){body{padding:12px;overflow-x:hidden}.page{margin:0;zoom:calc((100vw - 24px) / 1400)}}
+    @media print{body{padding:0;background:#fff}.page{margin:0;border:0;box-shadow:none;zoom:1}.top{padding-top:16px}.canvas{height:1010px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div><div class="eyebrow">System architecture · production-shaped NLP workflow</div><div class="title">End-to-End Ticket Intelligence Platform</div><div class="subtitle">Priority classification, LLM audit, agentic feedback capture, retrieval-augmented response generation, and evaluation.</div></div>
+      <div class="legend"><span class="legend-item"><i class="legend-box ml"></i>ML / experimentation</span><span class="legend-item"><i class="legend-box ai"></i>LLM / agents / tools</span><span class="legend-item"><i class="legend-box sw"></i>Software / data services</span></div>
+    </header>
+    <section class="canvas" aria-label="Architecture diagram">
+      <svg viewBox="0 0 1400 1010" aria-hidden="true">
+        <defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" class="arrow"/></marker><marker id="aa" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" class="arrow ai-arrow"/></marker><marker id="am" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" class="arrow ml-arrow"/></marker></defs>
+        <!-- training / artifact flow -->
+        <path class="flow ml-flow" marker-end="url(#am)" d="M185 190 V263 H301"/><path class="flow ml-flow" marker-end="url(#am)" d="M384 190 V263 H477"/><path class="flow ml-flow" marker-end="url(#am)" d="M565 190 V263 H654"/><path class="flow ml-flow" marker-end="url(#am)" d="M742 190 V263 H800"/>
+        <path class="flow ml-flow" marker-end="url(#am)" d="M458 344 V390"/><path class="flow ml-flow" marker-end="url(#am)" d="M800 344 V390"/><path class="flow ml-flow" marker-end="url(#am)" d="M942 344 V390"/>
+        <path class="flow ml-flow" marker-end="url(#am)" d="M800 468 V515"/><path class="flow ml-flow" marker-end="url(#am)" d="M942 468 V515"/>
+        <!-- inference flow -->
+        <path class="flow" marker-end="url(#a)" d="M700 651 V682 H547 V719"/><path class="flow" marker-end="url(#a)" d="M700 651 V682 H773 V719"/>
+        <path class="flow ml-flow" marker-end="url(#am)" d="M547 795 H700 V820"/><path class="flow ai-flow" marker-end="url(#aa)" d="M773 795 H700 V820"/>
+        <path class="flow ai-flow" marker-end="url(#aa)" d="M700 883 V922"/>
+        <!-- side integrations -->
+        <path class="flow ai-flow" marker-end="url(#aa)" d="M843 856 H1010 V647 H1085"/><path class="flow" marker-end="url(#a)" d="M835 856 H1010 V773 H1085"/>
+        <path class="flow ai-flow" marker-end="url(#aa)" d="M1200 657 V698"/><path class="flow" marker-end="url(#a)" d="M1200 836 V879"/>
+        <path class="flow ai-flow dashed" marker-end="url(#aa)" d="M1010 647 H930 V922 H840"/>
+        <!-- observability -->
+        <path class="flow dashed" marker-end="url(#a)" d="M193 922 H330 V883"/><path class="flow ai-flow dashed" marker-end="url(#aa)" d="M1100 922 H1000 V856"/><path class="flow ml-flow dashed" marker-end="url(#am)" d="M800 515 H1045 V879 H1085"/>
+      </svg>
+
+      <div class="section-label" style="left:48px;top:27px">Data & offline training</div>
+      <div class="group" style="left:34px;top:48px;width:830px;height:478px"><div class="group-label">ML TRAINING + EXPERIMENT TRACKING</div></div>
+      <div class="node sw" style="left:74px;top:105px;width:220px">Multilingual Ticket Dataset<small>CSV · body · answer · queue · tags · priority</small></div>
+      <div class="node ml" style="left:310px;top:105px;width:148px">EDA +<br>preprocessing<small>English filter · cleaning · split</small></div>
+      <div class="node ml" style="left:476px;top:105px;width:148px">MiniLM<small>all-MiniLM-L6-v2<br>384-d embeddings</small></div>
+      <div class="node ml" style="left:642px;top:105px;width:148px">One-Hot Encoder<small>queue + tag_1/3/4/5<br>frequency cap</small></div>
+      <div class="node ml" style="left:808px;top:105px;width:148px">MLflow<small>experiments · params<br>metrics · artifacts</small></div>
+      <div class="node ml tall" style="left:384px;top:390px;width:148px">Random Forest<small>200 trees · balanced<br>priority classifier</small></div>
+      <div class="node ml tall" style="left:726px;top:390px;width:148px">Evaluation<small>accuracy · F1 · confusion<br>matrix · model selection</small></div>
+      <div class="node ml" style="left:868px;top:390px;width:148px">Joblib Bundle<small>RF + encoder + OHE<br>final_rf_model.pkl</small></div>
+      <div class="node sw" style="left:726px;top:515px;width:148px">Model Registry<small>deployed artifact</small></div>
+
+      <div class="section-label" style="left:455px;top:548px">Online inference & response</div>
+      <div class="group" style="left:422px;top:570px;width:560px;height:392px"><div class="group-label">STREAMLIT APPLICATION · main.py</div></div>
+      <div class="node blue" style="left:618px;top:594px;width:164px">Ticket Intake<small>body + routing queue + tags</small></div>
+      <div class="node sw" style="left:468px;top:719px;width:158px">RF Inference<small>load bundle · predict_proba</small></div>
+      <div class="node ai" style="left:694px;top:719px;width:158px">LangChain Judge<small>structured verdict<br>priority + reasoning + action</small></div>
+      <div class="node ai tall" style="left:618px;top:820px;width:164px">Final Priority<small>RF prediction confirmed<br>or LLM override</small></div>
+      <div class="node ai" style="left:618px;top:922px;width:164px">Customer Response<small>priority · reasoning · RAG answer</small></div>
+
+      <div class="section-label" style="left:1058px;top:27px">AI services & memory</div>
+      <div class="node ai tall" style="left:1085px;top:70px;width:230px">Groq LLM Services<small>gpt-oss-20b · judge · RAG generator<br>LangGraph learning agent</small></div>
+      <div class="node ai" style="left:1085px;top:160px;width:230px">LangChain / LangGraph<small>prompts · structured output · tools</small></div>
+      <div class="node sw" style="left:1065px;top:240px;width:270px">RAG Source Corpus<small>English historical support answers · 10k sampled</small></div>
+      <div class="node sw" style="left:1085px;top:330px;width:230px">FAISS Vector DB<small>MiniLM embeddings · cosine retrieval · top-k=5</small></div>
+      <div class="node ai" style="left:1085px;top:647px;width:230px">RAG Answer Generator<small>retrieved context → grounded bullet response</small></div>
+      <div class="node sw store" style="left:1126px;top:773px;width:148px">Redis Cache<small>cosine similarity ≥ 0.85</small></div>
+      <div class="node sw store" style="left:1126px;top:879px;width:148px">DuckDB<small>RF ↔ LLM disagreements</small></div>
+
+      <div class="section-label" style="left:51px;top:842px">Observability & feedback</div>
+      <div class="node sw" style="left:51px;top:879px;width:230px">LangSmith<small>traces · prompts · latency · token cost</small></div>
+      <div class="node ai" style="left:313px;top:879px;width:230px">RAGAS Judge<small>NVIDIA endpoint · faithfulness<br>groundness · precision · recall</small></div>
+      <div class="node sw" style="left:51px;top:960px;width:230px">Feedback Dataset<small>2–3 month disagreement collection<br>then periodic QA / retraining</small></div>
+      <div class="label" style="left:906px;top:633px">retrieve / generate</div><div class="label" style="left:936px;top:765px">cache hit / miss</div><div class="label" style="left:851px;top:910px">score + log</div>
+    </section>
+    <footer class="footer"><span><strong>Primary path:</strong> ticket → RF classifier → LLM judge → RAG answer → final response</span><span><strong>Colors:</strong> red = ML · green = AI/LLM · black outline = software/data</span></footer>
+  </main>
+</body>
+</html>
